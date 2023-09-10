@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+// import file to media cwery
+@import "_breakpoints.scss";
+
+// import create Custom-Scrollbars-&-Selection-color
+@import "_Custom-Scrollbars-&-Selection-color.scss";
+
+// import containerScreen
+@import "_containerScreen.scss";
+/*! start variables*/
+
+$colorNormal: #ffffff;
+$colorHeading: #333;
+$colorSubheading: #787887;
+$bgColor: #4d7bf3;
+$error: #ff7978;
+
+/*! end variables*/
+/*! start Global Rules*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/*! end Global Rules*/
+/*! start code */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  .logo {
+    text-align: center;
+    img {
+      width: 300%;
+    }
+  }
+  .text {
+    text-align: center;
+    p:first-child {
+      font-size: 50px;
+      margin: 20px auto;
+      font-size: 600;
+      color: $colorSubheading;
+      span {
+        font-weight: 700;
+        color: $colorHeading;
+      }
+    }
+    p:last-child {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    @include media("<=480px") {
+      p:first-child {
+        font-size: 30px;
+      }
+      p:last-child {
+        font-size: 16px;
+      }
+    }
+  }
+  form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    align-content: space-around;
+    div {
+      input {
+        padding: 15px 180px 15px 20px;
+        border-radius: 40px;
+        margin-right: 20px;
+        border: 1px solid #d3d3ed;
+        box-shadow: 0 0 6px 0px #ededff;
+        @include media("<=tablet") {
+          padding: 15px 120px 15px 20px;
+        }
+        @include media("<=480px") {
+          margin-right: auto;
+        }
+        @include media("<=phone") {
+          padding: 15px 100px 15px 20px;
+        }
+      }
+    }
+    button {
+      border: none;
+      outline-style: none;
+      padding: 15px 60px;
+      border-radius: 40px;
+      background-color: $bgColor;
+      color: $colorNormal;
+      box-shadow: 0 6px 12px 0px #b5c9ff;
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.8;
+        cursor: pointer;
+        transform: scale(0.98);
+        box-shadow: inherit;
+      }
+      @include media("<=tablet") {
+        padding: 15px 30px;
+      }
+      @include media("<=480px") {
+        margin-top: 15px;
+      }
+    }
+    .error {
+      border: 2px solid $error !important;
+    }
+    .error-text {
+      display: flex;
+      justify-content: flex-start;
+      align-content: space-between;
+      font-size: 12px;
+      font-style: italic;
+      color: $error;
+      margin: 10px 30px;
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\21";
+        font-weight: 700;
+        padding: 0 6px;
+      }
+    }
+    .success {
+      border: 2px solid $bgColor !important;
+    }
+    .success-text {
+      display: flex;
+      justify-content: flex-start;
+      align-content: space-between;
+      font-size: 12px;
+      font-style: italic;
+      margin: 10px 30px;
+      color: $bgColor;
+      &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        font-weight: 700;
+        padding: 0 6px;
+      }
+    }
+    @include media("<=480px") {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  .image {
+    text-align: center;
+    img {
+      width: 70%;
+      margin: 40px auto 0px;
+    }
+  }
+  .link {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: space-around;
+      align-items: center;
+      list-style-type: none;
+      li {
+        margin: 20px 10px;
+        padding: 10px 12px;
+        border: 1px solid $colorSubheading;
+        border-radius: 40px;
+        color: $bgColor;
+        &:hover,
+        &:focus {
+          background-color: $bgColor;
+          color: $colorNormal;
+          cursor: pointer;
+        }
+      }
+      li:first-child {
+        padding: 10px 14px;
+      }
+    }
+  }
+  .Copy-right {
+    color: $colorSubheading;
+    font: {
+      size: 12px;
+      weight: 300;
+    }
+  }
+}
+/*! start Attribution */
+.attribution {
+  position: absolute;
+  bottom: 0rem;
+  color: $colorHeading;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 20px 0;
+  text-align: center;
+  width: -webkit-fill-available;
+  a {
+    font-size: smaller;
+    text-decoration: none;
+    color: $bgColor;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    &:hover::after {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 600;
+      content: "\f0a9";
+      font-size: 14px;
+      padding: 0 8px;
+    }
+  }
+}
+/*! end Attribution */
+/*! end code */

@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+/**
+*
+* Testing
+*
+**/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;
+  background-color: #787887;
+  border-left: 0 solid #ffffff;
+  border-right: 0 solid #ffffff;
+  margin-block: 3px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4d7bf3;
+  width: 15% !important;
+  height: 15% !important;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+::-moz-selection {
+  /* code for firefox */
+  color: #ffffff;
+  background-color: #4d7bf3;
+}
+
+::selection {
+  /* code for firefox */
+  color: #ffffff;
+  background-color: #4d7bf3;
+}
+
+/* end variables */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /*small*/
+  /* tablet */
+  /* Medium */
+  /* desktop  */
+}
+@media (min-width: 577px) {
+  .container {
+    width: 550px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1300px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*! start variables*/
+/*! end variables*/
+/*! start Global Rules*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/*! end Global Rules*/
+/*! start code */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.app .logo {
+  text-align: center;
+}
+.app .logo img {
+  width: 300%;
+}
+.app .text {
+  text-align: center;
+}
+.app .text p:first-child {
+  font-size: 50px;
+  margin: 20px auto;
+  font-size: 600;
+  color: #787887;
+}
+.app .text p:first-child span {
+  font-weight: 700;
+  color: #333;
+}
+.app .text p:last-child {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  .app .text p:first-child {
+    font-size: 30px;
+  }
+  .app .text p:last-child {
+    font-size: 16px;
+  }
+}
+.app form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.app form div input {
+  padding: 15px 180px 15px 20px;
+  border-radius: 40px;
+  margin-right: 20px;
+  border: 1px solid #d3d3ed;
+  box-shadow: 0 0 6px 0px #ededff;
+}
+@media (max-width: 768px) {
+  .app form div input {
+    padding: 15px 120px 15px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .app form div input {
+    margin-right: auto;
+  }
+}
+@media (max-width: 360px) {
+  .app form div input {
+    padding: 15px 100px 15px 20px;
+  }
+}
+.app form button {
+  border: none;
+  outline-style: none;
+  padding: 15px 60px;
+  border-radius: 40px;
+  background-color: #4d7bf3;
+  color: #ffffff;
+  box-shadow: 0 6px 12px 0px #b5c9ff;
+}
+.app form button:hover, .app form button:active, .app form button:focus {
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(0.98);
+  box-shadow: inherit;
+}
+@media (max-width: 768px) {
+  .app form button {
+    padding: 15px 30px;
+  }
+}
+@media (max-width: 480px) {
+  .app form button {
+    margin-top: 15px;
+  }
+}
+.app form .error {
+  border: 2px solid #ff7978 !important;
+}
+.app form .error-text {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-between;
+  font-size: 12px;
+  font-style: italic;
+  color: #ff7978;
+  margin: 10px 30px;
+}
+.app form .error-text::after {
+  font-family: "Font Awesome 6 Free";
+  content: "!";
+  font-weight: 700;
+  padding: 0 6px;
+}
+.app form .success {
+  border: 2px solid #4d7bf3 !important;
+}
+.app form .success-text {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-between;
+  font-size: 12px;
+  font-style: italic;
+  margin: 10px 30px;
+  color: #4d7bf3;
+}
+.app form .success-text::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: 700;
+  padding: 0 6px;
+}
+@media (max-width: 480px) {
+  .app form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.app .image {
+  text-align: center;
+}
+.app .image img {
+  width: 70%;
+  margin: 40px auto 0px;
+}
+.app .link ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.app .link ul li {
+  margin: 20px 10px;
+  padding: 10px 12px;
+  border: 1px solid #787887;
+  border-radius: 40px;
+  color: #4d7bf3;
+}
+.app .link ul li:hover, .app .link ul li:focus {
+  background-color: #4d7bf3;
+  color: #ffffff;
+  cursor: pointer;
+}
+.app .link ul li:first-child {
+  padding: 10px 14px;
+}
+.app .Copy-right {
+  color: #787887;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/*! start Attribution */
+.attribution {
+  position: absolute;
+  bottom: 0rem;
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 20px 0;
+  text-align: center;
+  width: -webkit-fill-available;
+}
+.attribution a {
+  font-size: smaller;
+  text-decoration: none;
+  color: #4d7bf3;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.attribution a:hover::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  content: "\f0a9";
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+/*! end Attribution */
+/*! end code *//*# sourceMappingURL=style.css.map */
