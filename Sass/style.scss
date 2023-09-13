@@ -39,7 +39,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
 }
 .app {
   display: flex;
@@ -48,6 +49,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
+  margin: 40px auto 0px;
   .logo {
     text-align: center;
     img {
@@ -209,8 +211,6 @@ body {
 }
 /*! start Attribution */
 .attribution {
-  position: absolute;
-  bottom: 0rem;
   color: $colorHeading;
   font-size: 14px;
   font-weight: 700;

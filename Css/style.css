@@ -97,7 +97,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .app {
@@ -107,6 +108,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
+  margin: 40px auto 0px;
 }
 .app .logo {
   text-align: center;
@@ -272,8 +274,6 @@ body {
 
 /*! start Attribution */
 .attribution {
-  position: absolute;
-  bottom: 0rem;
   color: #333;
   font-size: 14px;
   font-weight: 700;
